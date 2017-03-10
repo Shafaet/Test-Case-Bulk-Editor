@@ -11,6 +11,33 @@ This repository was mainly targeted to help HackerRank.com problem-setters to bu
 
 Imagine you have made 30 test cases with 1-based indexing, now for some reason you need to modify them all. This script makes it as easy as just reading and writing inputs.
 
+See a screenshot below, that's how simple it is:
 
 
+![screenshot](https://s3.amazonaws.com/hr-assets/0/1489151147-a4b3595d88-test.png)
 
+
+###How to use this tool?
+
+* Install a C++ compiler in your computer.
+* Clone the repository
+* Put your input files in input directory, by default they must be named input00.txt, input01.txt, input02.txt etc.
+* Open Main.cpp in your favorite IDE.
+* Modify the editInput method. There are comments and examples in the cpp file to help you out.
+
+
+###FAQ
+
+* My input file names are not like the default names. What should I do?
+
+  * The file name still must follow some rule. Edit getInputFileName method to generate names as you like.
+
+###Contribute
+
+Have an awesome improvement idea? Fixed a bug? Feel free to make a pull request.
+
+###Contact
+
+Email: shafaet.csedu@gmail.com
+
+[Blog](shafaetsplanet.com/blog)

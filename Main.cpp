@@ -6,7 +6,7 @@ using namespace std;
  * this is where you will write code to edit your file
  * the example shows the way to read 3 integers and print them in seperate line
  */
-void edit_input(ifstream &infile, ofstream &outfile){
+void editInput(ifstream &infile, ofstream &outfile){
     //EXAMPLE STARTS
     
     //simply take input
@@ -46,6 +46,8 @@ string getOutputFileName(int file_no){
 
 int main()
 {
+        //Dont edit unless you know what you are doing
+        
        for(int file_no=0; ;file_no++){
            
            string in = getInputFileName(file_no);
@@ -61,7 +63,7 @@ int main()
             outfile.open (out);
             if(outfile.is_open()){
                 cerr<<"EDITING "<<in<<" WRITING to "<<out<<endl;
-                edit_input(infile, outfile);      
+                editInput(infile, outfile);      
             }else{
                 puts("Output directory doesn't exist, please create the directory");
                 break;
