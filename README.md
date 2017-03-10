@@ -11,11 +11,14 @@ This repository was mainly targeted to help HackerRank.com problem-setters to bu
 
 Imagine you have made 30 test cases with 1-based indexing, now for some reason you need to modify them all. This script makes it as easy as just reading and writing inputs.
 
-See a screenshot below, that's how simple it is:
 
+###Example
+
+Imagine all your test cases contains 3 integers on the same line. You need to modify the files and put them on separate lines. The screenshot below shows how to do it:
 
 ![screenshot](https://s3.amazonaws.com/hr-assets/0/1489151147-a4b3595d88-test.png)
 
+Simple, isn't it?
 
 ###How to use this tool?
 
