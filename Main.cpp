@@ -2,8 +2,11 @@
 
 using namespace std;
 
+//Default File Folder names
 const string INPUT_FOLDER = "inputs";
 const string OUTPUT_FOLDER = "edited_inputs";
+const string INPUT_FILE_PREFIX = "input";
+const string OUTPUT_FILE_PREFIX = "input";
 
 /*
  * this is where you will write code to edit your file
@@ -29,11 +32,11 @@ void editInput(ifstream &infile, ofstream &outfile)
 /*
  * This function generates the file name from file number
  */
-string getFileName(string folder_name, int file_no)
+string getFileName(string folder_name, string file_prefix, int file_no)
 {
     string s=to_string(file_no);
     if(file_no >= 0 and file_no <= 9) s = "0" + s;
-    return folder_name + "/input" + s + ".txt";
+    return folder_name + "/" + file_prefix + s + ".txt";
 }
 
 int main()
@@ -42,8 +45,8 @@ int main()
 
        for(int file_no=0; ;file_no++){
 
-           string in = getFileName(INPUT_FOLDER, file_no);
-           string out = getFileName(OUTPUT_FOLDER, file_no);
+           string in = getFileName(INPUT_FOLDER, INPUT_FILE_PREFIX, file_no);
+           string out = getFileName(OUTPUT_FOLDER, OUTPUT_FILE_PREFIX, file_no);
 
            ifstream infile;
            ofstream outfile;

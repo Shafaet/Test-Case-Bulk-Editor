@@ -33,7 +33,7 @@ Simple, isn't it?
 
 * My input file names are not like the default names. What should I do?
 
-  * The file name still must follow some rule. Edit getInputFileName method to generate names as you like.
+  * You can just change the Folder or File Prefix from the 'Default File Folder Names' portion at the top.
 
 ###Contribute
 
