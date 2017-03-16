@@ -2,77 +2,67 @@
 
 using namespace std;
 
+const string INPUT_FOLDER = "inputs";
+const string OUTPUT_FOLDER = "edited_inputs";
+
 /*
  * this is where you will write code to edit your file
  * the example shows the way to read 3 integers and print them in seperate line
  */
-void editInput(ifstream &infile, ofstream &outfile){
+void editInput(ifstream &infile, ofstream &outfile)
+{
     //EXAMPLE STARTS
-    
+
     //simply take input
     int a,b,c;
     infile>>a>>b>>c;
-    
-    
+
+
     //print them as you like
     outfile<<a<<endl;
     outfile<<b<<endl;
     outfile<<c<<endl;
-    
+
     //EXAMPLE ENDS
 }
 
 /*
- * This function generates the input file name from file number
- * by default the file names are input00.txt, input01.txt, input02.txt etc
+ * This function generates the file name from file number
  */
-string getInputFileName(int file_no){
+string getFileName(string folder_name, int file_no)
+{
     string s=to_string(file_no);
     if(file_no >= 0 and file_no <= 9) s = "0" + s;
-    return "input/input" + s + ".txt";
-}
-
-
-/*
- * This function generates the output file name from file number
- * by default output files names are similar to input file names but located in different folder
- * by default outfiles will go to edited_input folder, make sure the folder exists
- */
-string getOutputFileName(int file_no){
-    string s = to_string(file_no);
-    if(file_no>=0 and file_no<=9) s = "0" + s;
-    return "edited_input/input"+ s +".txt";
+    return folder_name + "/input" + s + ".txt";
 }
 
 int main()
 {
-        //Dont edit unless you know what you are doing
-        
+        //Don't edit unless you know what you are doing
+
        for(int file_no=0; ;file_no++){
-           
-           string in = getInputFileName(file_no);
-           string out = getOutputFileName(file_no);
-           
+
+           string in = getFileName(INPUT_FOLDER, file_no);
+           string out = getFileName(OUTPUT_FOLDER, file_no);
+
            ifstream infile;
            ofstream outfile;
-           
+
            infile.open(in, ios_base::out | ios_base::in);
-           
-           
-           if (infile.is_open()){
-            outfile.open (out);
-            if(outfile.is_open()){
-                cerr<<"EDITING "<<in<<" WRITING to "<<out<<endl;
-                editInput(infile, outfile);      
-            }else{
-                puts("Output directory doesn't exist, please create the directory");
-                break;
-            }     
-            infile.close();
-            outfile.close();
-          }
-          else break;
-          
+
+           if(!infile.is_open()) break; //There is no more file to process
+
+           outfile.open(out);
+
+           if(!outfile.is_open()) {
+               cout<<"Output directory doesn't exist, please create the directory"<<endl;
+               break;
+           }
+
+           cerr<<"EDITING: "<<in<<" WRITING to: "<<out<<endl;
+           editInput(infile, outfile);
+
+           infile.close();
+           outfile.close();
        }
-       
 }
