@@ -1,18 +1,18 @@
-#Test Case Bulk Editor
+# Test Case Bulk Editor
 
 This repository makes it easy for problem-setters to bulk edit test-cases.
 
 
-###Who should use this repository?
+### Who should use this repository?
 
 This repository was mainly targeted to help HackerRank.com problem-setters to bulk edit test-cases. But if you can do some very very tiny modification, it can be useful for other problem-setter's too.
 
-###Why problem-setters need this tool?
+### Why problem-setters need this tool?
 
 Imagine you have made 30 test cases with 1-based indexing, now for some reason you need to modify them all. This script makes it as easy as just reading and writing inputs.
 
 
-###Example
+### Example
 
 Imagine all your test cases contains 3 integers on the same line. You need to modify the files and put them on separate lines. The screenshot below shows how to do it:
 
@@ -20,7 +20,7 @@ Imagine all your test cases contains 3 integers on the same line. You need to mo
 
 Simple, isn't it?
 
-###How to use this tool?
+### How to use this tool?
 
 * Install a C++ compiler in your computer.
 * Clone the repository
@@ -29,17 +29,17 @@ Simple, isn't it?
 * Modify the editInput method. There are comments and examples in the cpp file to help you out.
 
 
-###FAQ
+### FAQ
 
 * My input file names are not like the default names. What should I do?
 
   * The file name still must follow some rule. Edit getInputFileName method to generate names as you like.
 
-###Contribute
+### Contribute
 
 Have an awesome improvement idea? Fixed a bug? Feel free to make a pull request.
 
-###Contact
+### Contact
 
 Email: shafaet.csedu@gmail.com
 
