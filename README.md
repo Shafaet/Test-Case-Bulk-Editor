@@ -28,6 +28,8 @@ Simple, isn't it?
 * Open Main.cpp in your favorite IDE.
 * Modify the editInput method. There are comments and examples in the cpp file to help you out.
 
+** Code of this repository contains C++11 feature. If your compiler is in C++03 mode you need use the flag `-std=c++11` while compiling.**
+
 
 ### FAQ
 
