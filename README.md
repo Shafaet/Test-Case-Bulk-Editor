@@ -43,4 +43,4 @@ Have an awesome improvement idea? Fixed a bug? Feel free to make a pull request.
 
 Email: shafaet.csedu@gmail.com
 
-[Blog](shafaetsplanet.com/blog)
+[Blog](http://www.shafaetsplanet.com/blog)
